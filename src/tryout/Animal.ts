@@ -1,13 +1,14 @@
 
 export abstract class Animal {
 
-    type: any;
-    id: any;
-    name: string;
+    private type: any;
+    private id: any;
+    protected bla: string;
 
     constructor({ type, id }) {
         this.type = type;
         this.id = id; // Element ID
+        this.bla = "empty";
     }
 
     abstract setTitle(title: string): void;

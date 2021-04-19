@@ -6,15 +6,21 @@ import { ISnake } from "./Snake.js";
 
 export class Cat extends Animal {
 
-    title: string;
+    private title: string;
 
     constructor({ type, id, title = null }: ISnake) {
         super({ type, id });
         this.title = title;
+        this.bla = "Cat"
     }
 
     setTitle(input: string): void {
         console.log(" Set title to ", input);
+        this.title = input;
+    }
+
+    toConsole() {
+        console.log(" The value of bla is ", this.bla);
     }
 
     toJson(): any {

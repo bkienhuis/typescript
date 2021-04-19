@@ -12,9 +12,14 @@ export class Cat extends Animal {
     constructor({ type, id, title = null }) {
         super({ type, id });
         this.title = title;
+        this.bla = "Cat";
     }
     setTitle(input) {
         console.log(" Set title to ", input);
+        this.title = input;
+    }
+    toConsole() {
+        console.log(" The value of bla is ", this.bla);
     }
     toJson() {
         var t = super.toJson();

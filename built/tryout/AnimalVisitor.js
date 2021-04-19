@@ -13,11 +13,15 @@ export class AnimalVisitor {
     visitSnake(visitor) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(" -- VISIT Snake ");
+            visitor.toConsole();
+            // visitor.title = "bla bla"; // Not Allowed as is private
+            visitor.setTitle("bla bla");
         });
     }
     visitCat(visitor) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(" -- VISIT Cat ");
+            visitor.toConsole();
         });
     }
 }
